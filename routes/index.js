@@ -83,4 +83,15 @@ router.get("/profile/:userId", function (req, res, next) {
 //     });
 // });
 
+router.get("/secret", (req, res) => {
+  if (req.session.user) {
+    res.render("secret");
+  } else {
+    res.render("index", {
+      title: "Express",
+      message: "You can only see this if you are logged in",
+    });
+  }
+});
+
 module.exports = router;
