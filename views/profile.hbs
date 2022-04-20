@@ -1,0 +1,9 @@
+<h3>This is {{user.username}}'s profile</h3>
+
+<p>{{user.username}}'s posts</p>
+
+{{#each allPosts}}
+  <h5>{{this.title}}</h5>
+  <p>{{this.content}}</p>
+
+{{/each}}
